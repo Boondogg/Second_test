@@ -1,14 +1,20 @@
 {
-    "builds": [
-        {
-            "src":"app.py",
-            "use":"@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src":"/(.*)", 
-            "dest":"app.py"
-        }
-    ]
-} | Source: Genelify.com 
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ],
+  "output": "dist",
+  "ignore": ["node_modules", ".git"],
+  "env": {
+    "SECRET_KEY": "@secret_key"
+  }
+}
